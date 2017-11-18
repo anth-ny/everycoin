@@ -1,0 +1,126 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "everycoin",
+        "scope": null,
+        "escapedName": "everycoin",
+        "name": "everycoin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/user/everycoin"
+    ],
+    [
+      {
+        "raw": "everycoin",
+        "scope": null,
+        "escapedName": "everycoin",
+        "name": "everycoin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/user/everycoin"
+    ],
+    [
+      {
+        "raw": "everycoin",
+        "scope": null,
+        "escapedName": "everycoin",
+        "name": "everycoin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/user/everycoin"
+    ],
+    [
+      {
+        "raw": "everycoin",
+        "scope": null,
+        "escapedName": "everycoin",
+        "name": "everycoin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/user"
+    ]
+  ],
+  "_from": "everycoin",
+  "_id": "everycoin@0.0.10",
+  "_inCache": true,
+  "_location": "/everycoin",
+  "_nodeVersion": "6.11.5",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/everycoin-0.0.10.tgz_1510950579516_0.90793447336182"
+  },
+  "_npmUser": {
+    "name": "anth-ny",
+    "email": "anth-ny@emailanthony.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "everycoin",
+    "scope": null,
+    "escapedName": "everycoin",
+    "name": "everycoin",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/everycoin/-/everycoin-0.0.10.tgz",
+  "_shasum": "1361b93125cf79cc6234e755cbdb2210d61b7220",
+  "_shrinkwrap": null,
+  "_spec": "everycoin",
+  "_where": "/home/user",
+  "author": {
+    "name": "Anthony"
+  },
+  "dependencies": {
+    "bigi": ">=1.4.0",
+    "bip39": ">=2.3.0",
+    "bs58": ">=2.0.1",
+    "ecurve": ">=1.0.1",
+    "qrcode-terminal": ">=0.11.0"
+  },
+  "description": "crypto coin library",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1361b93125cf79cc6234e755cbdb2210d61b7220",
+    "tarball": "https://registry.npmjs.org/everycoin/-/everycoin-0.0.10.tgz"
+  },
+  "keywords": [
+    "bitcoin",
+    "dogecoin",
+    "feathercoin",
+    "litecoin",
+    "namecoin",
+    "unobtanium",
+    "skeincoin",
+    "worldcoin"
+  ],
+  "license": "CC-BY-ND",
+  "main": "everycoin.js",
+  "maintainers": [
+    {
+      "name": "anth-ny",
+      "email": "anth-ny@emailanthony.com"
+    }
+  ],
+  "name": "everycoin",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.10"
+}

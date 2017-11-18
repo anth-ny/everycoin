@@ -1,9 +1,9 @@
 "use strict"
 
 var base58=require('bs58')
-var version=require('./versions.json')
-var wif_version=require('./wif_versions.json')
-var algo=require('./algos.json')
+var version=require('./json/versions.json')
+var wif_version=require('./json/wif_versions.json')
+var algo=require('./json/algos.json')
 //var mh = require('multi-hashing-jh')
 var crypto = require('crypto')
 
@@ -82,18 +82,23 @@ exports.getpriv = function(wif) {
   return buf.slice(1,-4).toString('hex')
 }
 
-exports.getwif = function(private_key, version) {
-  //console.log('getwif',private_key,version)
+exports.getwif = function(private_key, coin) {
+  //console.log('getwif',private_key,coin)
+  if (coin==='') {
+    var ver=''
+  } else {
+    var ver=version[coin]
+  }
   var buf
   if (typeof(private_key)==='object') {
     //var name=Object.prototype.toString.call(private_key)
     if ((private_key instanceof Buffer)||(private_key instanceof SlowBuffer)) {
-      buf=prependversion(private_key, version)
+      buf=prependversion(private_key, ver)
     } else {
       buf=undefined
     }
   } else if (typeof(private_key)==='string') {
-    buf=new Buffer(version+private_key, 'hex')
+    buf=new Buffer(ver+private_key, 'hex')
   } else {
     buf=undefined
   }

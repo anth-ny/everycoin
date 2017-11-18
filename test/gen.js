@@ -1,5 +1,5 @@
-var ec=require('./everycoin.js')
-var version=require('./versions.json')
+var ec=require('../everycoin.js')
+var version=require('../json/versions.json')
 
 var crypto = require('crypto')
 

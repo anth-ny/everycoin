@@ -1,0 +1,3 @@
+To test before publishing, use "npm pack"
+Then use "npm install filename.tgz" to install from the local package
+See http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing

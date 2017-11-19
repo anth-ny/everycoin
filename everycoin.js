@@ -21,6 +21,10 @@ function sha256x2(buf) {
   return crypto.createHash('sha256').update(sha256x1).digest()
 }
 
+exports.getversion = function(coin) {
+  return version[coin]
+}
+
 exports.getchecksum = function(buf) {
   return sha256x2(buf).slice(0,4)
 }

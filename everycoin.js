@@ -91,7 +91,7 @@ exports.getwif = function(private_key, coin) {
   if (coin==='') {
     var ver=''
   } else {
-    var ver=version[coin]
+    var ver=wif_version[coin]
   }
   var buf
   if (typeof(private_key)==='object') {

@@ -78,7 +78,7 @@ exports.getaddress = function(pubk, coin) {
 
   var ver=version[coin]
   var fn=eval(algo[coin])
-  var hexaddress=gethexaddress(pubk)
+  var hexaddress=this.gethexaddress(pubk)
   var hash=prependversion(hexaddress, ver)
   //console.log(hash)
   var checksum=fn(hash).slice(0, 4)

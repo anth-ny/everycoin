@@ -10,8 +10,8 @@ describe('correct horse battery staple', function() {
     })
   })
   describe('getwif', function() {
-    it('returns the correct private key wif', function() {
-      assert.equal(ec.getwif(privk, 'BTC'), '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS')
+    it('returns the correct uncompressed private key wif', function() {
+      assert.equal(ec.getwif(privk, 'BTC', false), '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS')
     })
   })
   describe('getpublickey (uncompressed)', function() {
@@ -47,8 +47,8 @@ describe('getpriv 5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS', function
 describe('privk 0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE471BE89827E19D72AA1D', function() {
   var privk='0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE471BE89827E19D72AA1D'
   describe('getwif', function() {
-    it('returns the correct private key wif', function() {
-      assert.equal(ec.getwif(privk, 'BTC'), '5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ')
+    it('returns the correct uncompressed private key wif', function() {
+      assert.equal(ec.getwif(privk, 'BTC', false), '5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ')
     })
   })
 })

@@ -59,9 +59,11 @@ exports.getpublickey = function(private_key, compress) {
 }
 
 function prependversion(buf, version) {
-  //console.log('prependversion', buf, version)
-
   return Buffer.concat([new Buffer(version.toString('hex'), 'hex'), buf])
+}
+
+function appendcompressionflag(buf) {
+  return Buffer.concat([buf, new Buffer('01', 'hex')])
 }
 
 exports.getaddress = function(pubk, coin) {
@@ -86,7 +88,7 @@ exports.getpriv = function(wif) {
   return buf.slice(1,-4).toString('hex')
 }
 
-exports.getwif = function(private_key, coin) {
+exports.getwif = function(private_key, coin, compressed) {
   //console.log('getwif',private_key,coin)
   if (coin==='') {
     var ver=''
@@ -98,6 +100,9 @@ exports.getwif = function(private_key, coin) {
     //var name=Object.prototype.toString.call(private_key)
     if ((private_key instanceof Buffer)||(private_key instanceof SlowBuffer)) {
       buf=prependversion(private_key, ver)
+      if (compressed) {
+	buf=appendcompressionflag(buf)
+      }
     } else {
       buf=undefined
     }

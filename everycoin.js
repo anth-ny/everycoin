@@ -66,18 +66,24 @@ function appendcompressionflag(buf) {
   return Buffer.concat([buf, new Buffer('01', 'hex')])
 }
 
+exports.gethexaddress = function(pubk) {
+  var hash=crypto.createHash('sha256').update(pubk).digest()
+  var hash2=crypto.createHash('ripemd160').update(hash).digest()
+
+  return hash2
+}
+
 exports.getaddress = function(pubk, coin) {
   //console.log('getaddress', pubk, coin)
 
   var ver=version[coin]
   var fn=eval(algo[coin])
-  var hash=crypto.createHash('sha256').update(pubk).digest()
-  var hash2=crypto.createHash('ripemd160').update(hash).digest()
-  var hash3=prependversion(hash2, ver)
-  //console.log(hash3)
-  var checksum=fn(hash3).slice(0, 4)
+  var hexaddress=gethexaddress(pubk)
+  var hash=prependversion(hexaddress, ver)
+  //console.log(hash)
+  var checksum=fn(hash).slice(0, 4)
   //console.log(checksum)
-  var binary_address=Buffer.concat([hash3, new Buffer(checksum, 'hex')])
+  var binary_address=Buffer.concat([hash, new Buffer(checksum, 'hex')])
   //console.log(hash6)
 
   return new Buffer(base58.encode(binary_address)).toString()

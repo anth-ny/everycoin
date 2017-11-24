@@ -1,7 +1,5 @@
 {
-  "author": {
-    "name": "Anthony"
-  },
+  "author": "Anthony",
   "dependencies": {
     "bigi": ">=1.4.0",
     "bs58": ">=2.0.1",
@@ -11,7 +9,9 @@
   "devDependencies": {
     "mocha": "^4.0.1"
   },
-  "directories": {},
+  "directories": {
+    "test": "test"
+  },
   "dist": {
     "shasum": "1361b93125cf79cc6234e755cbdb2210d61b7220",
     "tarball": "https://registry.npmjs.org/everycoin/-/everycoin-0.0.10.tgz"
@@ -23,19 +23,23 @@
     "litecoin",
     "namecoin"
   ],
-  "license": "CC-BY-ND",
+  "license": "CC-BY-ND-4.0",
   "main": "everycoin.js",
   "maintainers": [
-    {
-      "name": "anth-ny",
-      "email": "anth-ny@emailanthony.com"
-    }
+    "anth-ny <anth-ny@emailanthony.com>"
   ],
   "name": "everycoin",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.13"
+  "version": "0.0.14",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anth-ny/everycoin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anth-ny/everycoin/issues"
+  },
+  "homepage": "https://github.com/anth-ny/everycoin#readme"
 }

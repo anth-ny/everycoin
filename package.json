@@ -8,7 +8,9 @@
     "ecurve": ">=1.0.1"
   },
   "description": "crypto coin library",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
   "directories": {},
   "dist": {
     "shasum": "1361b93125cf79cc6234e755cbdb2210d61b7220",
@@ -33,7 +35,7 @@
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "version": "0.0.13"
 }
